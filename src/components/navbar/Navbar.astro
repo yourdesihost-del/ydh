@@ -1,0 +1,14 @@
+---
+import { navItems } from '../../features/navigation/nav.data';
+import NavLink from './NavLink.astro';  
+---
+
+<nav>
+  <ul style="display:flex; gap:1.5rem; list-style:none;">
+    {navItems.map(item => (
+      <li>
+        <NavLink href={item.href} label={item.label} />
+      </li>
+    ))}
+  </ul>
+</nav>

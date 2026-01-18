@@ -1,0 +1,12 @@
+---
+type NavLinkProps = {
+  href: string;
+  label: string;
+};
+
+const { href, label } = Astro.props as NavLinkProps;
+---
+
+<a href={href} class="hover:underline">
+  {label}
+</a>
